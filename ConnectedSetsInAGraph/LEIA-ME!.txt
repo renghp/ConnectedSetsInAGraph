@@ -1,0 +1,26 @@
+Trabalho de Grafos 2014/2
+Renan Luigi Martins Guarese
+
+Como funciona o algoritmo:
+1) Fazemos uma busca em profundidade a partir de cada vértice do grafo usando sempre o mesmo vetor 
+de Nodos Visitados, para ter certeza de que passamos uma vez por todos os vértices.
+
+2) É criado um vetor "Posicao" com o número de vértices do grafo. Durante as buscas em profundidade, 
+sempre que um vértice W adjacente a um vértice V é visitado, o valor do vetor Posicao em V é incrementado.
+
+3) Após essas buscas, o grafo é invertido: todas as arestas apontam agora para o lado contrário de 
+onde apontavam antes, ou seja, se 1 -> 2, agora 2 -> 1.
+
+4) Com esse grafo invertido, basta fazermos buscas em profundidade nele usando como ordem o vetor Posicao. 
+Ou seja, o nodo com o maior número no vetor Posicao será o primeiro a passar pela busca em profundidade. 
+Usando um mesmo vetor de nodos visitados para todas as buscas, garantiremos que estamos passando 
+novamente apenas uma vez por cada vértice. Dessa maneira, cada busca em profundidade diferente 
+representará um Componente Conexo diferente.
+
+A prova do algoritmo consta em 
+http://www.professeurs.polymtl.ca/michel.gagnon/Disciplinas/Bac/Grafos/Busca/busca.html#Fort
+
+
+
+
+
